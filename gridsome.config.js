@@ -6,5 +6,7 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  plugins: [
+    'gridsome-plugin-pug' // add
+  ]
 }
