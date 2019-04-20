@@ -1,25 +1,43 @@
 <template lang="pug">
   layout
-    // Learn how to use images here: https://gridsome.org/docs/images
-    g-image(alt='Example image', src='~/favicon.png', width='135')
-      h1 Hello, world!
-      p
-        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-      p.home-links
-        a(href='https://gridsome.org/docs', target='_blank', rel='noopener') Gridsome Docs
-        a(href='https://github.com/gridsome/gridsome', target='_blank', rel='noopener') GitHub
+    #headerwrap
+      b-container
+        b-row.centered
+          b-col(lg="12")
+            h1 TRATTORIA e BAR PORTO
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: "Home",
+    meta: [
+      {
+        name: "fb:app_id",
+        content: process.env.FACEBOOK_APP_ID
+      }
+    ]
   }
-}
+};
 </script>
 
-<style>
-.home-links a {
-  margin-right: 1rem;
+<style scoped>
+.centered {
+  text-align: center;
+}
+#headerwrap {
+  background: url(../img/top.jpg) no-repeat center top;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 600px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 </style>

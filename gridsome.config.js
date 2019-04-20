@@ -5,7 +5,8 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'TRATTORIA e BAR PORTO',
+  icon: 'src/img/favicon.png',
   plugins: [
     'gridsome-plugin-pug' // add
   ]
