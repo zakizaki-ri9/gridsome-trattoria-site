@@ -8,6 +8,8 @@
           b-nav-item(href='about') About
           b-nav-item(href='recruit') Recruit
     slot
+    .background
+    .mask
 </template>
 
 <script>
@@ -31,8 +33,39 @@ query {
 }
 </static-query>
 
-<style>
+<style lang="scss">
 body {
   padding-top: 56px;
 }
+.background {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 90vw;
+  min-height: 90vh;
+  background-image: url("../img/top.jpg");
+  background-size: cover;
+  background-position: top;
+  opacity: 0.5;
+  z-index: -2;
+}
+.mask {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($color: #ffffff, $alpha: 0.3);
+  z-index: -1;
+}
+// .background-mask {
+//   position: absolute;
+//   top: 56px;
+//   left: 0;
+//   right: 0;
+//   margin: auto;
+//   opacity: 0.5;
+// }
 </style>

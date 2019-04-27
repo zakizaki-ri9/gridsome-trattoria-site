@@ -1,10 +1,9 @@
 <template lang="pug">
   layout
-    #headerwrap
-      b-container
-        b-row.centered
-          b-col(lg="12")
-            h1 TRATTORIA e BAR PORTO
+    b-container
+      b-row.centered
+        b-col(lg="12")
+          h1 TRATTORIA e BAR PORTO
 </template>
 
 <script>
@@ -21,23 +20,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .centered {
   text-align: center;
-}
-#headerwrap {
-  background: url(../img/top.jpg) no-repeat center top;
-  background-attachment: relative;
-  background-position: center center;
-  min-height: 600px;
-  width: 100%;
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  padding-top: 140px;
+  h1 {
+    font-size: 80px;
+    color: #e53935;
+    font-family: "Raleway";
+    font-weight: 300;
+  }
 }
 </style>
