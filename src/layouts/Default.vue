@@ -1,15 +1,21 @@
 <template lang="pug">
   div
-    b-navbar(toggleable='md' type='dark' variant='info' fixed='top')
+    b-navbar(toggleable='md' type='dark' variant='dark' fixed='top')
       b-navbar-toggle(target='nav-collapse')
       b-collapse#nav-collapse(is-nav='')
-        b-navbar-nav(right)
-          b-nav-item(href='/') Home
-          b-nav-item(href='about') About
-          b-nav-item(href='recruit') Recruit
-    slot
-    .background
+        b-navbar-nav
+          b-nav-item(href='/') Top
+          b-nav-item(href='#about') About
+          b-nav-item(href='#recruit') Recruit
+          b-nav-item(href='#access') Access
+      
+      a#instagram-link(
+        href='https://www.instagram.com/trattoriaporto'
+        target='_blank'
+      )
+        font-awesome-icon(:icon="['fab', 'instagram']")
     .mask
+    slot
 </template>
 
 <script>
@@ -35,37 +41,32 @@ query {
 
 <style lang="scss">
 body {
+  // navbar用
   padding-top: 56px;
 }
-.background {
-  position: absolute;
-  top: 56px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 90vw;
-  min-height: 90vh;
-  background-image: url("../img/top.jpg");
-  background-size: cover;
-  background-position: top;
-  opacity: 0.5;
-  z-index: -2;
-}
+// 白透過用のマスクスタイル
 .mask {
+  // position: absolute;
+  // top: 56px;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
   position: absolute;
-  top: 56px;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba($color: #ffffff, $alpha: 0.3);
+  // min-height: calc(100% - 56px);
+  background-color: rgba($color: white, $alpha: 0.5);
   z-index: -1;
 }
-// .background-mask {
-//   position: absolute;
-//   top: 56px;
-//   left: 0;
-//   right: 0;
-//   margin: auto;
-//   opacity: 0.5;
-// }
+#instagram-link {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: white;
+  cursor: pointer;
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+}
 </style>

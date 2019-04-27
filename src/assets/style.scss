@@ -1,3 +1,18 @@
-p {
-  color: #4b4b4b; 
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+body {
+  background-image: url("../img/top.jpg");
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  font-family: 'Noto Sans JP';
+  h1, h2, h3, h4, h5 {
+    font-family: 'Pacifico', cursive;
+  }
+  section {
+    background: #2c3e50;
+    color: whitesmoke;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }

@@ -7,6 +7,7 @@
 module.exports = {
   siteName: 'TRATTORIA e BAR PORTO',
   icon: 'src/img/favicon.png',
+  titleTemplate: `TRATTORIA e BAR PORTO - %s`,
   plugins: [
     'gridsome-plugin-pug' // add
   ]
