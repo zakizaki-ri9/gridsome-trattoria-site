@@ -1,12 +1,17 @@
-# Default starter for Gridsome
 
-### 1. Install Gridsome CLI tool if you don't have
+# TRATTORIA e BAR PORTO
 
-`npm install --global @gridsome/cli`
+TRATTORIA e BAR PORTOという  
+山梨県の北イタリア料理居酒屋のサイトです。
 
-### 2. Create a Gridsome project
+## 情報
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+- URL: https://trattoria-e-bar-porto-yamanashi.netlify.com/
+- Instagram: https://www.instagram.com/trattoriaporto/
+- powered by Gridsome
+
+## 実行方法
+
+```bash
+gridsome develop
+```
