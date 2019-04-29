@@ -38,8 +38,7 @@
                   |  山梨県笛吹市石和町井戸197 
 </template>
 
-<script>
-</script>
+<script></script>
 
 <style lang="scss" scoped>
 table {

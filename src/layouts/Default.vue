@@ -23,7 +23,7 @@ export default {
   metaInfo: {
     meta: [
       {
-        property: "fb:app_id",
+        property: 'fb:app_id',
         content: process.env.FACEBOOK_APP_ID
       }
     ]
@@ -66,7 +66,7 @@ body {
   right: 10px;
   color: white;
   cursor: pointer;
-  font-family: "Pacifico", cursive;
+  font-family: 'Pacifico', cursive;
   font-size: 30px;
 }
 </style>

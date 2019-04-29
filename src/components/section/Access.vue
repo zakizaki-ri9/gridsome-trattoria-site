@@ -11,8 +11,6 @@
           h4 Sorry, please wait ...
 </template>
 
-<script>
-</script>
+<script></script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
