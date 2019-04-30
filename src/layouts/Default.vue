@@ -37,6 +37,14 @@ export default {
         property: 'og:image',
         content:
           'https://trattoria-e-bar-porto-yamanashi.netlify.com/ogpimg.jpg'
+      },
+      {
+        property: 'fb:app_id',
+        content: '445473682878964' //TODO: dot-envで取得するように修正する
+      },
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image'
       }
     ]
   }
