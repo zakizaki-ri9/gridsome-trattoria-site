@@ -22,9 +22,21 @@
 export default {
   metaInfo: {
     meta: [
+      { property: 'og:site_name', content: 'TRATTORIA e BAR PORTO' },
+      { property: 'og:type', content: 'website' },
       {
-        property: 'fb:app_id',
-        content: process.env.FACEBOOK_APP_ID
+        property: 'og:url',
+        content: 'https://trattoria-e-bar-porto-yamanashi.netlify.com/'
+      },
+      { property: 'og:title', content: 'TRATTORIA e BAR PORTO' },
+      {
+        property: 'og:description',
+        content: '山梨県にある北イタリア料理居酒屋です。'
+      },
+      {
+        property: 'og:image',
+        content:
+          'https://trattoria-e-bar-porto-yamanashi.netlify.com/ogpimg.jpg'
       }
     ]
   }
@@ -46,17 +58,11 @@ body {
 }
 // 白透過用のマスクスタイル
 .mask {
-  // position: absolute;
-  // top: 56px;
-  // right: 0;
-  // bottom: 0;
-  // left: 0;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  // min-height: calc(100% - 56px);
   background-color: rgba($color: white, $alpha: 0.5);
   z-index: -1;
 }
