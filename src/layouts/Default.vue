@@ -26,7 +26,7 @@ export default {
       { property: 'og:type', content: 'website' },
       {
         property: 'og:url',
-        content: 'https://trattoria-e-bar-porto-yamanashi.netlify.com/'
+        content: 'https://trattoria-e-bar-porto-yamanashi.netlify.com'
       },
       { property: 'og:title', content: 'TRATTORIA e BAR PORTO' },
       {
