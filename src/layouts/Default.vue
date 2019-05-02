@@ -7,8 +7,7 @@
           b-nav-item(href='/') Top
           b-nav-item(href='/#about') About
           b-nav-item(href='/#recruit') Recruit
-          //- TODO: 後ほど有効か
-          //- b-nav-item(href='/gallery') Gallery
+          b-nav-item(href='/gallery') Gallery
       
       a#instagram-link(
         href='https://www.instagram.com/trattoriaporto'
