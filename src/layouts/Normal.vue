@@ -7,15 +7,12 @@
           b-nav-item(href='/') Top
           b-nav-item(href='/#about') About
           b-nav-item(href='/#recruit') Recruit
-          //- TODO: 後ほど有効か
-          //- b-nav-item(href='/gallery') Gallery
-      
+          b-nav-item(href='/gallery') Gallery
       a#instagram-link(
         href='https://www.instagram.com/trattoriaporto'
         target='_blank'
       )
         font-awesome-icon(:icon="['fab', 'instagram']")
-    .mask
     slot
 </template>
 
@@ -62,31 +59,7 @@ query {
 
 <style lang="scss">
 body {
-  // 背景にお店の画像を表示
-  background-image: url('../img/top.jpg');
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
   // navbar用
   padding-top: 56px;
-}
-// 白透過用のマスクスタイル
-.mask {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba($color: white, $alpha: 0.5);
-  z-index: -1;
-}
-#instagram-link {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  color: white;
-  cursor: pointer;
-  font-family: 'Pacifico', cursive;
-  font-size: 30px;
 }
 </style>
