@@ -34,7 +34,7 @@ export default {
       {
         property: 'og:image',
         content:
-          'https://trattoria-e-bar-porto-yamanashi.netlify.com/img/ogpimg.jpg'
+          'https://trattoria-e-bar-porto-yamanashi.netlify.com/ogpimg.jpg'
       },
       {
         property: 'fb:app_id',
