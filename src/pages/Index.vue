@@ -6,9 +6,7 @@
           h1
             | TRATTORIA
             br
-            | e
-            br
-            | BAR PORTO
+            | PORTO
     about-section
     recruit-section
     access-section
@@ -17,10 +15,10 @@
 <script>
 export default {
   metaInfo: {
-    title: "Home",
+    title: 'Home',
     meta: [
       {
-        name: "fb:app_id",
+        name: 'fb:app_id',
         content: process.env.FACEBOOK_APP_ID
       }
     ]

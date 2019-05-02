@@ -22,13 +22,13 @@
 export default {
   metaInfo: {
     meta: [
-      { property: 'og:site_name', content: 'TRATTORIA e BAR PORTO' },
+      { property: 'og:site_name', content: 'TRATTORIA PORTO' },
       { property: 'og:type', content: 'website' },
       {
         property: 'og:url',
         content: 'https://trattoria-e-bar-porto-yamanashi.netlify.com'
       },
-      { property: 'og:title', content: 'TRATTORIA e BAR PORTO' },
+      { property: 'og:title', content: 'TRATTORIA PORTO' },
       {
         property: 'og:description',
         content: '山梨県にある北イタリア料理居酒屋です。'

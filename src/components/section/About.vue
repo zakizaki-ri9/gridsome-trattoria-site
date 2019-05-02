@@ -8,7 +8,7 @@
         )
           p
             b
-              i 「TRATTORIA e BAR PORTO」
+              i 「TRATTORIA PORTO」
             | と言います。
             br
             | 山梨でカジュアルにイタリア料理を楽しめるお店ができました。
