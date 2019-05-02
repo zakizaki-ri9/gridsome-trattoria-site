@@ -9,19 +9,12 @@
             | PORTO
     about-section
     recruit-section
-    access-section
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'Home',
-    meta: [
-      {
-        name: 'fb:app_id',
-        content: process.env.FACEBOOK_APP_ID
-      }
-    ]
+    title: 'Home'
   }
 };
 </script>

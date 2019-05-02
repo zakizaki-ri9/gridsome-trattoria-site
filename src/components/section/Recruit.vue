@@ -1,7 +1,7 @@
 <template lang="pug">
   section#recruit(name='recruit')
     b-container
-      h1 Recruit
+      h1 Recruit / Access
       b-row
         b-col(
           lg="6"
