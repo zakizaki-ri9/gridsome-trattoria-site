@@ -6,7 +6,7 @@
         b-navbar-nav
           b-nav-item(href='/') Top
           b-nav-item(href='/#about') About
-          b-nav-item(href='/#recruit') Recruit
+          b-nav-item(href='/#recruit') Access
           b-nav-item(href='/gallery') Gallery
       a#instagram-link(
         href='https://www.instagram.com/trattoriaporto'
@@ -34,7 +34,7 @@ export default {
       {
         property: 'og:image',
         content:
-          'https://trattoria-e-bar-porto-yamanashi.netlify.com/ogpimg.jpg'
+          'https://trattoria-e-bar-porto-yamanashi.netlify.com/ogpimg2.jpg'
       },
       {
         property: 'fb:app_id',

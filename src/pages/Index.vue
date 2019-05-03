@@ -1,12 +1,10 @@
 <template lang="pug">
   layout
-    b-container
-      b-row.centered
-        b-col(lg="12")
-          h1
-            | TRATTORIA
-            br
-            | PORTO
+    section#top
+      h1
+        | TRATTORIA
+        br
+        | PORTO
     about-section
     recruit-section
 </template>
@@ -20,19 +18,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.centered {
+#top {
+  background-image: url('../img/top_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   text-align: center;
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 170px;
+  padding-bottom: 170px;
   @media screen and (max-width: 500px) {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 130px;
+    padding-bottom: 130px;
   }
   h1 {
     font-size: 14vw;
-    color: #e53935;
+    color: #d50000;
     font-weight: 300;
-
     @media screen and (min-width: 500px) {
       font-size: 70px;
     }
