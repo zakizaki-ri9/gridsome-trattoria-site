@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 #top {
-  background-image: url('../img/top_background.jpg');
+  background-image: url('../img/top_background_min.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
