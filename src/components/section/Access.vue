@@ -18,7 +18,7 @@
                 target='_blank'
               )
                 h5
-                  font-awesome-icon(:icon="['fa', 'phone']")
+                  i.fa.fa-phone
                   |  055-234-5256
             b-list-group-item
               a(
@@ -26,7 +26,7 @@
                 target='_blank'
               )
                 h5
-                  font-awesome-icon(:icon="['fa', 'map-marker']")
+                  i.fa.fa-map-marker
                   |  山梨県笛吹市石和町井戸197 
             b-list-group-item
               a(
@@ -34,7 +34,7 @@
                 target='_blank'
               )
                 h5
-                  font-awesome-icon(:icon="['fab', 'facebook-square']")
+                  i.fab.fa-facebook-square
                   |  Facebookのアカウント
             b-list-group-item
               a(
@@ -42,7 +42,7 @@
                 target='_blank'
               )
                 h5
-                  font-awesome-icon(:icon="['fab', 'instagram']")
+                  i.fab.fa-instagram
                   |  Instagramのアカウント
 </template>
 
