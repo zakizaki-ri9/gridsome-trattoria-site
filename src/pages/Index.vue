@@ -6,7 +6,7 @@
         br
         | PORTO
     about-section
-    recruit-section
+    access-section
 </template>
 
 <script>
@@ -22,13 +22,13 @@ export default {
   background-image: url('../img/top_background_min.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   text-align: center;
-  padding-top: 170px;
-  padding-bottom: 170px;
+  padding-top: 175px;
+  padding-bottom: 175px;
   @media screen and (max-width: 500px) {
-    padding-top: 130px;
-    padding-bottom: 130px;
+    padding-top: 135px;
+    padding-bottom: 135px;
   }
   h1 {
     font-size: 14vw;

@@ -6,14 +6,22 @@
         b-navbar-nav
           b-nav-item(href='/') Top
           b-nav-item(href='/#about') About
-          b-nav-item(href='/#recruit') Access
+          b-nav-item(href='/#access') Access
           b-nav-item(href='/gallery') Gallery
-      
-      a#instagram-link(
-        href='https://www.instagram.com/trattoriaporto'
-        target='_blank'
-      )
-        font-awesome-icon(:icon="['fab', 'instagram']")
+      .sns-link-box
+        ul
+          li
+            a(
+              href='https://www.facebook.com/Trattoria-Porto-2008761036085611'
+              target='_blank'
+            )
+              font-awesome-icon(:icon="['fab', 'facebook']")
+          li
+            a(
+              href='https://www.instagram.com/trattoriaporto'
+              target='_blank'
+            )
+              font-awesome-icon(:icon="['fab', 'instagram']")
     slot
 </template>
 
@@ -30,7 +38,7 @@ export default {
       { property: 'og:title', content: 'TRATTORIA PORTO' },
       {
         property: 'og:description',
-        content: '山梨県にある北イタリア料理居酒屋です。'
+        content: '山梨県にある北イタリア料理店（レストラン＆バー）です！'
       },
       {
         property: 'og:image',
@@ -62,13 +70,21 @@ query {
 body {
   padding-top: 56px;
 }
-#instagram-link {
+.sns-link-box {
   position: absolute;
   top: 0;
   right: 10px;
   color: white;
   cursor: pointer;
   font-family: 'Pacifico', cursive;
-  font-size: 30px;
+  font-size: 35px;
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      margin-left: 10px;
+      border-radius: 5px;
+    }
+  }
 }
 </style>
