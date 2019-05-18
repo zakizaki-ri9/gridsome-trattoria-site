@@ -7,7 +7,9 @@
           lg="6"
         )
           p
-            | ご予約はTELにて承ります。
+            | お問い合わせ・ご予約は、TELにて承ります。
+            br
+            | 念のため、場所をご確認の上、お越しください！
             br
           b-list-group
             b-list-group-item
@@ -28,20 +30,20 @@
                   |  山梨県笛吹市石和町井戸197 
             b-list-group-item
               a(
-                href='https://www.instagram.com/trattoriaporto'
-                target='_blank'
-              )
-                h5
-                  font-awesome-icon(:icon="['fab', 'instagram']")
-                  |  Instagramのアカウント
-            b-list-group-item
-              a(
                 href='https://www.facebook.com/Trattoria-Porto-2008761036085611s'
                 target='_blank'
               )
                 h5
                   font-awesome-icon(:icon="['fab', 'facebook']")
                   |  Facebookのアカウント
+            b-list-group-item
+              a(
+                href='https://www.instagram.com/trattoriaporto'
+                target='_blank'
+              )
+                h5
+                  font-awesome-icon(:icon="['fab', 'instagram']")
+                  |  Instagramのアカウント
 </template>
 
 <script></script>
