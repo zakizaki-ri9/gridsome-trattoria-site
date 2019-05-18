@@ -6,8 +6,9 @@ import NormalLayout from '~/layouts/Normal.vue';
 import AboutSection from '~/components/section/About.vue';
 import GallerySection from '~/components/section/Gallery.vue';
 import AccessSection from '~/components/section/Access.vue';
+import BlankSection from '~/components/section/Blank.vue';
 import MenuSlide from '~/components/carousel/MenuSlide.vue';
-import YahooMap from '~/components/map/Yahoo.vue';
+import SocialLinkButton from '~/components/footer/SocialLinkButton.vue';
 import '~/assets/style.scss';
 import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -27,10 +28,11 @@ export default function(Vue) {
   Vue.component('AboutSection', AboutSection);
   Vue.component('GallerySection', GallerySection);
   Vue.component('AccessSection', AccessSection);
+  Vue.component('BlankSection', BlankSection);
 
   Vue.component('MenuSlide', MenuSlide);
 
-  Vue.component('YahooMap', YahooMap);
+  Vue.component('SocialLinkButton', SocialLinkButton);
 
   Vue.component('font-awesome-icon', FontAwesomeIcon);
 

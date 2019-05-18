@@ -1,6 +1,7 @@
 <template lang="pug">
   normal-layout
     gallery-section
+    blank-section
 </template>
 
 <script>

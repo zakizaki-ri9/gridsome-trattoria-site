@@ -15,7 +15,7 @@
               href='https://www.facebook.com/Trattoria-Porto-2008761036085611'
               target='_blank'
             )
-              font-awesome-icon(:icon="['fab', 'facebook']")
+              font-awesome-icon(:icon="['fab', 'facebook-square']")
           li
             a(
               href='https://www.instagram.com/trattoriaporto'
@@ -23,6 +23,8 @@
             )
               font-awesome-icon(:icon="['fab', 'instagram']")
     slot
+    #footer
+      social-link-button
 </template>
 
 <script>
@@ -69,14 +71,19 @@ query {
 <style lang="scss">
 body {
   padding-top: 56px;
+  #footer {
+    position: fixed;
+    bottom: 10px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    padding: auto;
+  }
 }
 .sns-link-box {
   position: absolute;
   top: 0;
   right: 10px;
-  color: white;
-  cursor: pointer;
-  font-family: 'Pacifico', cursive;
   font-size: 35px;
   ul {
     display: flex;

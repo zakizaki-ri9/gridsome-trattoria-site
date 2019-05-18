@@ -7,6 +7,7 @@
         | PORTO
     about-section
     access-section
+    blank-section
 </template>
 
 <script>

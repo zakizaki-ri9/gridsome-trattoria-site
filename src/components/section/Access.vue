@@ -34,7 +34,7 @@
                 target='_blank'
               )
                 h5
-                  font-awesome-icon(:icon="['fab', 'facebook']")
+                  font-awesome-icon(:icon="['fab', 'facebook-square']")
                   |  Facebookのアカウント
             b-list-group-item
               a(
