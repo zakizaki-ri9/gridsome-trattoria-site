@@ -4,7 +4,6 @@
 import IndexLayout from '~/layouts/Default.vue';
 import NormalLayout from '~/layouts/Normal.vue';
 import AboutSection from '~/components/section/About.vue';
-import RecruitSection from '~/components/section/Recruit.vue';
 import GallerySection from '~/components/section/Gallery.vue';
 import AccessSection from '~/components/section/Access.vue';
 import MenuSlide from '~/components/carousel/MenuSlide.vue';
@@ -26,7 +25,6 @@ export default function(Vue) {
   Vue.component('NormalLayout', NormalLayout);
 
   Vue.component('AboutSection', AboutSection);
-  Vue.component('RecruitSection', RecruitSection);
   Vue.component('GallerySection', GallerySection);
   Vue.component('AccessSection', AccessSection);
 
