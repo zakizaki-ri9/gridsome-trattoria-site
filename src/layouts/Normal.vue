@@ -15,13 +15,13 @@
               href='https://www.facebook.com/Trattoria-Porto-2008761036085611'
               target='_blank'
             )
-              font-awesome-icon(:icon="['fab', 'facebook-square']")
+              i.fab.fa-facebook-square
           li
             a(
               href='https://www.instagram.com/trattoriaporto'
               target='_blank'
             )
-              font-awesome-icon(:icon="['fab', 'instagram']")
+              i.fab.fa-instagram
     slot
     #footer
       social-link-button
