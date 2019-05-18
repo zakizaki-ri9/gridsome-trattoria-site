@@ -7,7 +7,7 @@
           b-nav-item(href='/') Top
           b-nav-item(href='/#about') About
           b-nav-item(href='/#access') Access
-          b-nav-item(href='/gallery') Gallery
+          b-nav-item(href='/gallery/') Gallery
       .sns-link-box
         ul
           li
