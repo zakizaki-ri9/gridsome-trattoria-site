@@ -9,6 +9,12 @@ module.exports = {
   icon: 'src/img/favicon.png',
   titleTemplate: `TRATTORIA e BAR PORTO - %s`,
   plugins: [
-    'gridsome-plugin-pug' // add
+    'gridsome-plugin-pug',
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-140372616-1'
+      }
+    }
   ]
 };
