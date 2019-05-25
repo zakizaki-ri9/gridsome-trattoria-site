@@ -5,14 +5,12 @@
         href='https://twitter.com/intent/tweet?url=https://trattoria-e-bar-porto-yamanashi.netlify.com/&text=山梨県にある北イタリア料理店（レストラン＆バー）です！'
         target='_blank'
       )
-        //- font-awesome-icon(:icon="['fab', 'twitter']")
         i.fab.fa-twitter
     li
       a(
         href='https://www.facebook.com/sharer/sharer.php?u=https://trattoria-e-bar-porto-yamanashi.netlify.com/'
         target='_blank'
       )
-        //- font-awesome-icon(:icon="['fab', 'facebook']")
         i.fab.fa-facebook
 </template>
 
