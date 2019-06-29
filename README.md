@@ -1,6 +1,8 @@
 
 # TRATTORIA e BAR PORTO
 
+![ソースコードサイズ](https://img.shields.io/github/languages/code-size/zakizaki-ri9/gridsome-trattoria-site.svg)
+
 TRATTORIA e BAR PORTOという  
 山梨県の北イタリア料理居酒屋のサイトです。
 
