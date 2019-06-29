@@ -60,9 +60,9 @@ export default {
           'https://trattoria-e-bar-porto-yamanashi.netlify.com/menu/07-lunch.jpg'
         ]
       }
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped></style>
