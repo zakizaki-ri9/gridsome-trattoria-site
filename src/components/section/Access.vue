@@ -44,6 +44,14 @@
                 h5
                   i.fab.fa-instagram
                   |  Instagramのアカウント
+            b-list-group-item
+              a(
+                href='https://tabelog.com/yamanashi/A1901/A190103/19011040/'
+                target='_blank'
+              )
+                h5
+                  i.fas.fa-utensils
+                  |  食べログ
 </template>
 
 <script></script>
