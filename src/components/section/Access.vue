@@ -22,12 +22,12 @@
                   |  055-234-5256
             b-list-group-item
               a(
-                href='https://goo.gl/maps/DPHwzSMTuchX6bZC6'
+                href='https://goo.gl/maps/6c9dqBZ1DZjCpo188'
                 target='_blank'
               )
                 h5
                   i.fa.fa-map-marker
-                  |  山梨県笛吹市石和町井戸197 
+                  |  GoogleMap - 山梨県笛吹市石和町井戸197 
             b-list-group-item
               a(
                 href='https://www.facebook.com/Trattoria-Porto-2008761036085611s'
