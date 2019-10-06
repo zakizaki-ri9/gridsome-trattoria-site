@@ -14,7 +14,6 @@ import MenuSlide from '~/components/carousel/MenuSlide.vue'
 import SocialLinkButton from '~/components/footer/SocialLinkButton.vue'
 
 import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 export default function(Vue) {
