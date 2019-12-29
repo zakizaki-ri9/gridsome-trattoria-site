@@ -4,7 +4,10 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "doc:gen": "rm -rf website && npx vuese gen",
+    "doc:serve": "vuese serve --open",
+    "doc": "npm run doc:gen && npm run doc:serve"
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
@@ -13,6 +16,7 @@
     "gridsome": "^0.7.7"
   },
   "devDependencies": {
+    "@vuese/cli": "^2.8.3",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",

@@ -10,3 +10,6 @@ dist
 # netlify large media系
 .netlify/
 .lfsconfig
+
+# vuese
+website/
