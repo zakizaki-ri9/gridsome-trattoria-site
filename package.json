@@ -12,7 +12,7 @@
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
     "bootstrap": "^4.3.1",
-    "bootstrap-vue": "^2.0.2",
+    "bootstrap-vue": "^2.10.0",
     "gridsome": "^0.7.7"
   },
   "devDependencies": {
