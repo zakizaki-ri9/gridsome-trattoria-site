@@ -21,7 +21,7 @@ exports.getEnvs = () => {
     if (originEnv[key]) {
       console.log({
         originEnv: origin,
-        key: key
+        key: key,
       })
       env['process.env.' + key] = JSON.stringify(middleware(originEnv[key]))
     }

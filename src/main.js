@@ -16,7 +16,7 @@ import SocialLinkButton from '~/components/footer/SocialLinkButton.vue'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-export default function(Vue) {
+export default function (Vue) {
   Vue.component('Layout', IndexLayout)
   Vue.component('NormalLayout', NormalLayout)
 
