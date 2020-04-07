@@ -35,28 +35,28 @@ export default {
       { property: 'og:type', content: 'website' },
       {
         property: 'og:url',
-        content: 'https://trattoria-e-bar-porto-yamanashi.netlify.com'
+        content: 'https://trattoria-e-bar-porto-yamanashi.netlify.com',
       },
       { property: 'og:title', content: 'TRATTORIA PORTO' },
       {
         property: 'og:description',
-        content: '山梨県にある北イタリア料理居酒屋です。'
+        content: '山梨県にある北イタリア料理居酒屋です。',
       },
       {
         property: 'og:image',
         content:
-          'https://trattoria-e-bar-porto-yamanashi.netlify.com/ogpimg2.jpg'
+          'https://trattoria-e-bar-porto-yamanashi.netlify.com/ogpimg2.jpg',
       },
       {
         property: 'fb:app_id',
-        content: '445473682878964' //TODO: dot-envで取得するように修正する
+        content: '445473682878964', //TODO: dot-envで取得するように修正する
       },
       {
         name: 'twitter:card',
-        content: 'summary_large_image'
-      }
-    ]
-  }
+        content: 'summary_large_image',
+      },
+    ],
+  },
 }
 </script>
 

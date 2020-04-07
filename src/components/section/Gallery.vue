@@ -48,7 +48,7 @@ export default {
           '../../img/gallery/menu/04-pasta.jpg',
           '../../img/gallery/menu/05-second.jpg',
           '../../img/gallery/menu/06-doruttie.jpg',
-          '../../img/gallery/menu/07-lunch.jpg'
+          '../../img/gallery/menu/07-lunch.jpg',
         ],
         url: [
           'https://trattoria-e-bar-porto-yamanashi.netlify.com/menu/01.jpg',
@@ -57,11 +57,11 @@ export default {
           'https://trattoria-e-bar-porto-yamanashi.netlify.com/menu/04-pasta.jpg',
           'https://trattoria-e-bar-porto-yamanashi.netlify.com/menu/05-second.jpg',
           'https://trattoria-e-bar-porto-yamanashi.netlify.com/menu/06-doruttie.jpg',
-          'https://trattoria-e-bar-porto-yamanashi.netlify.com/menu/07-lunch.jpg'
-        ]
-      }
+          'https://trattoria-e-bar-porto-yamanashi.netlify.com/menu/07-lunch.jpg',
+        ],
+      },
     }
-  }
+  },
 }
 </script>
 
