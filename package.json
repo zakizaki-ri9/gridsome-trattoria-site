@@ -19,7 +19,7 @@
     "gridsome": "^0.7.13"
   },
   "devDependencies": {
-    "@vuese/cli": "^2.8.3",
+    "@vuese/cli": "^2.10.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
