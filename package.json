@@ -16,7 +16,7 @@
     "@gridsome/plugin-google-analytics": "^0.1.1",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
-    "gridsome": "^0.7.17"
+    "gridsome": "^0.7.21"
   },
   "devDependencies": {
     "@vuese/cli": "^2.10.0",
