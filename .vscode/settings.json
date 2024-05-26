@@ -1,0 +1,10 @@
+{
+  "yaml.schemas": {
+    "https://www.artillery.io/schema.json": []
+  },
+  "eslint.experimental.useFlatConfig": true,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+}

@@ -1,20 +1,75 @@
+# Nuxt 3 Minimal Starter
 
-# TRATTORIA e BAR PORTO
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-![ソースコードサイズ](https://img.shields.io/github/languages/code-size/zakizaki-ri9/gridsome-trattoria-site.svg)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/93354da8-971c-4041-9cc7-09f67b76f67d/deploy-status)](https://app.netlify.com/sites/trattoria-e-bar-porto-yamanashi/deploys)
+## Setup
 
-TRATTORIA e BAR PORTOという  
-山梨県の北イタリア料理居酒屋のサイトです。
-
-## 情報
-
-- URL: https://trattoria-e-bar-porto-yamanashi.netlify.com/
-- Instagram: https://www.instagram.com/trattoriaporto/
-- powered by Gridsome
-
-## 実行方法
+Make sure to install the dependencies:
 
 ```bash
-gridsome develop
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
 ```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm run dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm run preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
