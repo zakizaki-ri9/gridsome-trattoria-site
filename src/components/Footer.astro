@@ -1,0 +1,71 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-info">
+            <h3>TRATTORIA PORTO</h3>
+            <p>山梨県にある北イタリア料理店（レストラン＆バー）</p>
+        </div>
+        <div class="footer-links">
+            <a
+                href="https://twitter.com/intent/tweet?url=https://trattoria-e-bar-porto-yamanashi.pages.dev/&text=山梨県にある北イタリア料理店（レストラン＆バー）です！"
+                target="_blank"
+                rel="noopener noreferrer">Share on Twitter</a
+            >
+            <a
+                href="https://www.facebook.com/sharer/sharer.php?u=https://trattoria-e-bar-porto-yamanashi.pages.dev/"
+                target="_blank"
+                rel="noopener noreferrer">Share on Facebook</a
+            >
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; {year} TRATTORIA PORTO. All rights reserved.
+    </div>
+</footer>
+
+<style>
+    .footer {
+        background-color: var(--bg-dark);
+        color: white;
+        padding: 40px 0 20px;
+        margin-top: auto;
+    }
+    .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    .footer-info h3 {
+        margin: 0 0 10px 0;
+        font-size: 1.5rem;
+        color: white;
+    }
+    .footer-info p {
+        margin: 0;
+        color: #ccc;
+    }
+    .footer-links {
+        display: flex;
+        gap: 15px;
+    }
+    .footer-links a {
+        color: #ccc;
+        font-size: 0.9rem;
+    }
+    .footer-links a:hover {
+        color: white;
+    }
+    .copyright {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        font-size: 0.85rem;
+        color: #999;
+    }
+</style>

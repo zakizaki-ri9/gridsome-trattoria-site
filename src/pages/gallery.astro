@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Gallery">
+    <section class="gallery-section">
+        <div class="container">
+            <h1>Gallery & Menu</h1>
+            <p>
+                現在サイトリニューアルに向けた準備中です。近日中にメニューダイジェストと店内の風景を公開予定です。
+            </p>
+
+            <!-- Phase 2: ここにInstagramピックアップ画像を実装 -->
+            <div class="gallery-placeholder">Coming Soon</div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .gallery-section {
+        padding: 60px 0;
+    }
+    h1 {
+        color: var(--primary-color);
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .gallery-placeholder {
+        background-color: #eee;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #999;
+        font-size: 1.5rem;
+        border-radius: 8px;
+    }
+</style>
