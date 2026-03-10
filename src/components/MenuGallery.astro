@@ -1,0 +1,53 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+// assetsフォルダ内のメニュー画像を全取得
+const imageModules = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/images/menu/*.{jpeg,jpg,png,gif}",
+);
+const images = await Promise.all(
+    Object.values(imageModules).map((resolve) => resolve()),
+);
+---
+
+<div class="gallery-grid">
+    {
+        images.map((img, index) => (
+            <div class="gallery-item">
+                <Image
+                    src={img.default}
+                    alt={`メニュー画像 ${index + 1}`}
+                    format="webp"
+                    class="gallery-img"
+                />
+            </div>
+        ))
+    }
+</div>
+
+<style>
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 20px 0;
+    }
+    .gallery-item {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        aspect-ratio: 1 / 1;
+    }
+    .gallery-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    .gallery-item:hover .gallery-img {
+        transform: scale(1.05);
+    }
+</style>

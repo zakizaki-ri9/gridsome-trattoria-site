@@ -1,0 +1,141 @@
+---
+
+---
+
+<section id="access" class="access-section">
+    <div class="container">
+        <h2 class="section-title">Access</h2>
+        <div class="access-content">
+            <div class="access-text">
+                <p>
+                    お問い合わせ・ご予約は、TELにて承ります。<br
+                    />念のため、場所をご確認の上、お越しください！
+                </p>
+
+                <ul class="link-list">
+                    <li>
+                        <a
+                            href="tel:0552345256"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span class="icon">📞</span> 055-234-5256
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://goo.gl/maps/6c9dqBZ1DZjCpo188"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span class="icon">📍</span> GoogleMap - 山梨県笛吹市石和町井戸197
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.facebook.com/Trattoria-Porto-2008761036085611s"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span class="icon">📘</span> Facebookのアカウント
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.instagram.com/trattoriaporto"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span class="icon">📸</span> Instagramのアカウント
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://tabelog.com/yamanashi/A1901/A190103/19011040/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span class="icon">🍴</span> 食べログ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="map-container">
+                <!-- 簡易的にGoogleマップ埋め込み（住所より検索したものをプレースホルダーとして配置） -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.5487779774!2d138.63666011526!3d35.65215648020121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601bfc7bc0000001%3A0x6b72fd41c19def27!2z44OI44Op44OD44OI44Oq44KiIOODneODq-ODiA!5e0!3m2!1sja!2sjp!4v1680000000000!5m2!1sja!2sjp"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .access-section {
+        background-color: white;
+    }
+    .section-title {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 30px;
+        text-align: center;
+        font-family: var(--font-family-heading);
+    }
+    .access-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    @media (min-width: 768px) {
+        .access-content {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+    }
+    .access-text p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    .link-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .link-list a {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: var(--secondary-color);
+        border-radius: 8px;
+        color: var(--text-main);
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    .link-list a:hover {
+        background-color: #e0e0e0;
+        transform: translateY(-2px);
+        text-decoration: none;
+    }
+    .icon {
+        font-size: 1.2rem;
+        margin-right: 15px;
+        width: 24px;
+        text-align: center;
+    }
+    .map-container {
+        height: 400px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+</style>

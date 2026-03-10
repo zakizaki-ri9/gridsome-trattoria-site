@@ -1,43 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Access from "../components/Access.astro";
 ---
 
 <Layout title="Home">
-	<section id="hero" class="hero">
-		<!-- Phase 2: ここにHeroセクションを実装 -->
-		<div class="container text-center">
-			<h1>TRATTORIA<br />PORTO</h1>
-			<p>山梨でカジュアルに北イタリアの郷土料理・お酒を</p>
-		</div>
-	</section>
-
-	<section id="about">
-		<!-- Phase 2: ここにAboutセクションを実装 -->
-		<div class="container">
-			<h2>About</h2>
-			<p>現在サイトリニューアルに向けた準備中です。</p>
-		</div>
-	</section>
-
-	<section id="access">
-		<!-- Phase 2: ここにAccessセクションを実装 -->
-		<div class="container">
-			<h2>Access</h2>
-			<p>現在サイトリニューアルに向けた準備中です。</p>
-		</div>
-	</section>
+	<Hero />
+	<About />
+	<Access />
 </Layout>
-
-<style>
-	.hero {
-		background-color: var(--secondary-color);
-		padding: 100px 0;
-	}
-	h1 {
-		color: var(--primary-color);
-		font-size: 3rem;
-	}
-	.text-center {
-		text-align: center;
-	}
-</style>

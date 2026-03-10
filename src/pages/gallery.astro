@@ -1,17 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import MenuGallery from "../components/MenuGallery.astro";
 ---
 
 <Layout title="Gallery">
     <section class="gallery-section">
         <div class="container">
             <h1>Gallery & Menu</h1>
-            <p>
-                現在サイトリニューアルに向けた準備中です。近日中にメニューダイジェストと店内の風景を公開予定です。
+            <p class="description">
+                Instagramからピックアップした当店のおすすめメニューと店内の風景です。
             </p>
 
-            <!-- Phase 2: ここにInstagramピックアップ画像を実装 -->
-            <div class="gallery-placeholder">Coming Soon</div>
+            <MenuGallery />
         </div>
     </section>
 </Layout>
@@ -23,16 +23,12 @@ import Layout from "../layouts/Layout.astro";
     h1 {
         color: var(--primary-color);
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
+        font-family: var(--font-family-heading);
     }
-    .gallery-placeholder {
-        background-color: #eee;
-        height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #999;
-        font-size: 1.5rem;
-        border-radius: 8px;
+    .description {
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 40px;
     }
 </style>
