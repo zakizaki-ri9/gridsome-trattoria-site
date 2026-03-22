@@ -6,12 +6,19 @@ import Footer from "../components/Footer.astro";
 interface Props {
 	title: string;
 	description?: string;
+	ogImage?: string;
 }
 
-const {
-	title,
+const { 
+	title, 
 	description = "山梨県にある北イタリア料理店（レストラン＆バー）",
+	ogImage = "/ogpimg.jpg"
 } = Astro.props;
+
+// サイトのURLが未設定の場合のフォールバック
+const siteURL = Astro.site || new URL('https://trattoria-e-bar-porto-yamanashi.pages.dev');
+const canonicalURL = new URL(Astro.url.pathname, siteURL);
+const ogImageURL = new URL(ogImage, canonicalURL);
 ---
 
 <!doctype html>
@@ -23,6 +30,23 @@ const {
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={`${title} | TRATTORIA PORTO`} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImageURL} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={`${title} | TRATTORIA PORTO`} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={ogImageURL} />
 
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
