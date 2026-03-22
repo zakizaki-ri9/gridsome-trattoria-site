@@ -1,53 +1,89 @@
 ---
-import type { ImageMetadata } from "astro";
-import { Image } from "astro:assets";
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
 
-// assetsフォルダ内のメニュー画像を全取得
-const imageModules = import.meta.glob<{ default: ImageMetadata }>(
-    "/src/assets/images/menu/*.{jpeg,jpg,png,gif}",
-);
+const imageModules = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/menu/*.{jpeg,jpg,png,gif}');
 const images = await Promise.all(
-    Object.values(imageModules).map((resolve) => resolve()),
+  Object.values(imageModules).map((resolve) => resolve())
 );
 ---
 
 <div class="gallery-grid">
-    {
-        images.map((img, index) => (
-            <div class="gallery-item">
-                <Image
-                    src={img.default}
-                    alt={`メニュー画像 ${index + 1}`}
-                    format="webp"
-                    class="gallery-img"
-                />
-            </div>
-        ))
-    }
+  {images.map((img, index) => (
+    <div class="gallery-item">
+      <!-- data-fslightbox属性を付与してfslightboxによるモーダル表示に対応 -->
+      <a data-fslightbox="menu-gallery" href={img.default.src}>
+        <Image 
+          src={img.default} 
+          alt={`Menu Item ${index + 1}`} 
+          format="webp"
+          class="gallery-img" 
+        />
+        <div class="view-overlay">
+          <span>画像を拡大</span>
+        </div>
+      </a>
+    </div>
+  ))}
 </div>
 
+<!-- fslightboxをクライアントサイドで読み込む -->
+<script src="fslightbox/index.js"></script>
+
 <style>
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 20px;
-        padding: 20px 0;
-    }
-    .gallery-item {
-        position: relative;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
-        aspect-ratio: 1 / 1;
-    }
-    .gallery-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
-    .gallery-item:hover .gallery-img {
-        transform: scale(1.05);
-    }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+  }
+  .gallery-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .view-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .view-overlay span {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+  }
+  .gallery-item:hover .gallery-img {
+    transform: scale(1.05);
+  }
+  .gallery-item:hover .view-overlay {
+    opacity: 1;
+  }
+  .gallery-item:hover .view-overlay span {
+    transform: translateY(0);
+  }
 </style>
