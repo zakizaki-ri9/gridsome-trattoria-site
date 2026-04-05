@@ -1,0 +1,8 @@
+# NetlifyからCloudflare Pagesへのリダイレクト設定
+# ※ Cloudflare Pagesの公開URLが決まったら "to" のURLを書き換えてください。
+
+[[redirects]]
+  from = "/*"
+  to = "https://trattoria-e-bar-porto-yamanashi.pages.dev/:splat"
+  status = 301
+  force = true

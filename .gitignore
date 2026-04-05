@@ -1,15 +1,24 @@
-*.log
-.cache
-.DS_Store
-src/.temp
-node_modules
-dist
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
 .env
-.env.*
+.env.production
 
-# netlify large media系
-.netlify/
-.lfsconfig
+# macOS-specific files
+.DS_Store
 
-# vuese
-website/
+# jetbrains setting folder
+.idea/
