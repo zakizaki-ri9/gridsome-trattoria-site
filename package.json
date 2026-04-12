@@ -2,6 +2,7 @@
   "name": "grateful-group",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@10.28.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -11,12 +12,6 @@
   "dependencies": {
     "astro": "^5.17.1",
     "fslightbox": "^3.7.5"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "sharp"
-    ]
   },
   "devDependencies": {
     "sharp": "^0.34.5"

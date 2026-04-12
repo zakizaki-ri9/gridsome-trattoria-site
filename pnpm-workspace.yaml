@@ -9,7 +9,7 @@ allowBuilds:
 # 検疫期間: 公開から7日（10,080分）経過していないバージョンのインストールをブロック
 minimumReleaseAge: 10080
 
-# esbuild 関連や画像処理など、リリース頻度が高く上記制限に頻繁に引っかかる公式/メジャー系を除外
+# ビルドツール・画像処理など、リリース頻度が高く上記制限に頻繁に引っかかる公式/メジャー系を除外
 minimumReleaseAgeExclude:
   - 'esbuild'
   - '@esbuild/*'
@@ -20,6 +20,8 @@ minimumReleaseAgeExclude:
   - '@vitejs/*'
   - 'astro'
   - '@astrojs/*'
+  - 'sharp'
+  - '@img/*'
 
 # 信頼度ダウングレード防止
 trustPolicy: no-downgrade

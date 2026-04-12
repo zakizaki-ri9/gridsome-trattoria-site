@@ -5,8 +5,8 @@
 ## 🚀 開発環境のセットアップ
 
 ### 前提条件
-- Node.js (v18以降を推奨)
-- pnpm (v10以降を推奨 / サプライチェーン攻撃対策済)
+- Node.js (>=18.20.8)
+- pnpm (>=10.28.1 / `pnpm-workspace.yaml` でセキュリティ設定を管理)
 
 ### インストール
 
@@ -33,7 +33,7 @@ pnpm install
 ## 🛠 技術スタック
 
 * **フレームワーク**: Astro (SSG)
-* **パッケージ管理**: pnpm (v10 ~)
+* **パッケージ管理**: pnpm (>=10.28.1)
 * **スタイリング**: Vanilla CSS (`src/styles/global.css`)
 * **ホスティング**: Cloudflare Pages
 * **ギャラリー UI**: fslightbox
