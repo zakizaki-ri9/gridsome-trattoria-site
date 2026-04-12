@@ -11,5 +11,11 @@
   "dependencies": {
     "astro": "^5.17.1",
     "fslightbox": "^3.7.5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
   }
 }
