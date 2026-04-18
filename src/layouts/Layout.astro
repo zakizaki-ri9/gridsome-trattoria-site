@@ -61,12 +61,12 @@ const ogImageURL = new URL(ogImage, canonicalURL);
 		{import.meta.env.PUBLIC_GA_ID && (
 			<>
 				<script is:inline type="text/partytown" src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}></script>
-				<script is:inline type="text/partytown" define:vars={{ gaId: import.meta.env.PUBLIC_GA_ID }}>
+				<script is:inline type="text/partytown" set:html={`
 				  window.dataLayer = window.dataLayer || [];
 				  window.gtag = function gtag() { dataLayer.push(arguments); };
 				  gtag('js', new Date());
-				  gtag('config', gaId);
-				</script>
+				  gtag('config', '${import.meta.env.PUBLIC_GA_ID}');
+				`} />
 			</>
 		)}
 	</head>
