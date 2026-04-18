@@ -56,6 +56,15 @@ const ogImageURL = new URL(ogImage, canonicalURL);
 		/>
 
 		<title>{title} | TRATTORIA PORTO</title>
+
+		<!-- Google tag (gtag.js) -->
+		<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-SD3E60BNQQ"></script>
+		<script type="text/partytown">
+		  window.dataLayer = window.dataLayer || [];
+		  window.gtag = function gtag() { dataLayer.push(arguments); };
+		  gtag('js', new Date());
+		  gtag('config', 'G-SD3E60BNQQ');
+		</script>
 	</head>
 	<body>
 		<Header />
