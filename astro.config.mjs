@@ -9,14 +9,14 @@ export default defineConfig({
       PUBLIC_GA_ID: envField.string({
         context: 'client',
         access: 'public',
-        default: 'G-SD3E60BNQQ',
+        optional: true,
       }),
     },
   },
   integrations: [
     partytown({
       config: {
-        forward: ['dataLayer.push', 'gtag'],
+        forward: ['dataLayer.push'],
       },
     }),
   ],
