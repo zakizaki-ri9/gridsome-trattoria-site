@@ -1,5 +1,23 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
+import partytown from '@astrojs/partytown';
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  env: {
+    schema: {
+      PUBLIC_GA_ID: envField.string({
+        context: 'client',
+        access: 'public',
+        optional: true,
+      }),
+    },
+  },
+  integrations: [
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
+  ],
+});

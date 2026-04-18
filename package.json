@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/partytown": "^2.1.7",
     "astro": "^5.17.1",
     "fslightbox": "^3.7.5"
   },
