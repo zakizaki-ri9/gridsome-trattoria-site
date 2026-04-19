@@ -17,7 +17,7 @@ const {
 } = Astro.props;
 
 // サイトのURLが未設定の場合のフォールバック
-const siteURL = Astro.site || new URL('https://trattoria-e-bar-porto-yamanashi.pages.dev');
+const siteURL = Astro.site!;
 const canonicalURL = new URL(Astro.url.pathname, siteURL);
 const ogImageURL = new URL(ogImage, canonicalURL);
 ---
@@ -77,9 +77,8 @@ const ogImageURL = new URL(ogImage, canonicalURL);
 			"@type": "Restaurant",
 			"name": "トラットリア ポルト (TRATTORIA PORTO)",
 			"image": ogImageURL.toString(),
-			"@id": "",
 			"url": siteURL.toString(),
-			"telephone": "055-234-5256",
+			"telephone": "+81-55-234-5256",
 			"address": {
 				"@type": "PostalAddress",
 				"streetAddress": "石和町井戸197",
