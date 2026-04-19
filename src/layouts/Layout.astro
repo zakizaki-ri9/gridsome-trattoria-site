@@ -12,7 +12,7 @@ interface Props {
 
 const { 
 	title, 
-	description = "山梨県にある北イタリア料理店（レストラン＆バー）",
+	description = "山梨県笛吹市にある北イタリア料理店（レストラン＆バー）「トラットリア ポルト (TRATTORIA PORTO)」。石窯ピッツァやこだわりのワインをお楽しみいただけます。",
 	ogImage = "/ogpimg.jpg"
 } = Astro.props;
 
@@ -37,14 +37,14 @@ const ogImageURL = new URL(ogImage, canonicalURL);
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={canonicalURL} />
-		<meta property="og:title" content={`${title} | TRATTORIA PORTO`} />
+		<meta property="og:title" content={`${title} | トラットリア ポルト (TRATTORIA PORTO)`} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={ogImageURL} />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content={canonicalURL} />
-		<meta property="twitter:title" content={`${title} | TRATTORIA PORTO`} />
+		<meta property="twitter:title" content={`${title} | トラットリア ポルト (TRATTORIA PORTO)`} />
 		<meta property="twitter:description" content={description} />
 		<meta property="twitter:image" content={ogImageURL} />
 
@@ -56,7 +56,7 @@ const ogImageURL = new URL(ogImage, canonicalURL);
 			rel="stylesheet"
 		/>
 
-		<title>{title} | TRATTORIA PORTO</title>
+		<title>{title} | トラットリア ポルト (TRATTORIA PORTO)</title>
 
 		<!-- Google tag (gtag.js) -->
 		{PUBLIC_GA_ID && (
@@ -70,6 +70,26 @@ const ogImageURL = new URL(ogImage, canonicalURL);
 				`} />
 			</>
 		)}
+
+		<!-- JSON-LD LocalBusiness -->
+		<script type="application/ld+json" is:inline set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Restaurant",
+			"name": "トラットリア ポルト (TRATTORIA PORTO)",
+			"image": ogImageURL.toString(),
+			"@id": "",
+			"url": siteURL.toString(),
+			"telephone": "055-234-5256",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "石和町井戸197",
+				"addressLocality": "笛吹市",
+				"addressRegion": "山梨県",
+				"postalCode": "406-0031",
+				"addressCountry": "JP"
+			},
+			"servesCuisine": "Italian"
+		})} />
 	</head>
 	<body>
 		<Header />
