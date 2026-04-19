@@ -16,7 +16,7 @@ const {
 	ogImage = "/ogpimg.jpg"
 } = Astro.props;
 
-// サイトのURLが未設定の場合のフォールバック
+// site は astro.config.mjs で必ず設定されている前提
 const siteURL = Astro.site!;
 const canonicalURL = new URL(Astro.url.pathname, siteURL);
 const ogImageURL = new URL(ogImage, canonicalURL);
