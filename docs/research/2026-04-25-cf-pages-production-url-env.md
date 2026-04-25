@@ -54,7 +54,24 @@ site: process.env.SITE_URL || process.env.CF_PAGES_URL || 'http://localhost:4321
 - [Cloudflare Pages Build Configuration - Environment variables](https://developers.cloudflare.com/pages/configuration/build-configuration/#environment-variables)（公式ドキュメント、最終更新: 2026-04-21）
 
 ## 推奨事項
-本プロジェクトでは**パターン2（カスタム環境変数 `SITE_URL`）**を推奨する。理由は以下の通り。
-1. コードからURLのハードコードを完全に排除できる
-2. 将来の独自ドメイン導入時にCloudflareダッシュボード上の設定変更のみで対応可能
-3. Productionにのみ設定すれば、プレビュー環境では自動的に `CF_PAGES_URL` にフォールバックする
+本プロジェクトでは**パターン1のバリアント（リポジトリ定数 + `CF_PAGES_BRANCH` 分岐）**を採用した。
+
+### 採用方式
+`src/consts.ts` に本番URLを定数として定義し、`astro.config.mjs` で `CF_PAGES_BRANCH` を用いて本番/プレビューを判定する。
+
+```javascript
+// src/consts.ts
+export const SITE_URL = 'https://trattoria-e-bar-porto-yamanashi.pages.dev';
+
+// astro.config.mjs
+import { SITE_URL } from './src/consts';
+const isProduction = !process.env.CF_PAGES_BRANCH || process.env.CF_PAGES_BRANCH === 'master';
+site: isProduction ? SITE_URL : process.env.CF_PAGES_URL,
+```
+
+### 採用理由
+1. プラットフォーム移行時に `src/consts.ts` の定数を1箇所変更するだけで済む
+2. Cloudflareダッシュボードへの依存を避け、リポジトリ内で設定を完結できる
+3. コードレビューでURL変更を追跡可能
+
+> **注**: パターン2（ダッシュボードでのカスタム環境変数）は、コード変更なしでURLを変更できるメリットがあるため、比較資料として上記に残している。
