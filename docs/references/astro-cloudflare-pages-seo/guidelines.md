@@ -3,26 +3,49 @@
 本ガイドラインは、AstroプロジェクトをCloudflare Pagesにデプロイする際の、動的なURL生成（SEO対策）のベストプラクティスを定めたものです。
 
 ## 1. サイト基本URLの動的設定
-Cloudflare Pagesは、本番環境とプレビュー環境（ブランチデプロイ）で異なるURLを自動生成します。OGP画像やサイトマップのURLを各環境に自動適応させるため、`astro.config.mjs` の `site` 設定は静的な文字列ではなく、環境変数を参照します。
+
+### 重要: `CF_PAGES_URL` は本番URLではない
+Cloudflare Pages が自動注入する `CF_PAGES_URL` は、本番デプロイであっても `https://<commit-hash>.<project>.pages.dev` 形式のデプロイ固有URLが設定される。正規の本番URL（`https://<project>.pages.dev` や独自ドメイン）は**自動提供されない**。
+
+### 推奨: リポジトリ定数 `SITE_URL` を使う
+`src/consts.ts` に本番用の正規URLを定数として定義し、`astro.config.mjs` から import する。`CF_PAGES_BRANCH` により本番 / プレビューを判定する。
+
+```typescript
+// src/consts.ts
+export const SITE_URL = 'https://trattoria-e-bar-porto-yamanashi.pages.dev';
+```
 
 ```javascript
 // astro.config.mjs
+import { SITE_URL } from './src/consts';
+
+// 本番ブランチでは定数の正規URLを使用し、プレビュー環境ではCF_PAGES_URLを使用する
+const isProduction = !process.env.CF_PAGES_BRANCH || process.env.CF_PAGES_BRANCH === 'master';
+
 export default defineConfig({
-  // 独自ドメインがある場合は CUSTOM_DOMAIN を優先し、なければ CF_PAGES_URL を使用
-  site: process.env.CUSTOM_DOMAIN || process.env.CF_PAGES_URL || 'http://localhost:4321',
+  // 本番ブランチではリポジトリ定数 SITE_URL、プレビューでは CF_PAGES_URL を使用
+  site: isProduction ? SITE_URL : process.env.CF_PAGES_URL,
 });
 ```
 
-*※ `CF_PAGES_URL` はCloudflareビルド時に自動付与されます。独自ドメインを導入した場合は、Pagesのダッシュボードから `CUSTOM_DOMAIN` 環境変数を手動で設定してください。*
+この構成により:
+- **本番デプロイ**: `SITE_URL` 定数が使われ、正規URLでサイトマップ等が生成される
+- **プレビュー環境**: `CF_PAGES_URL` が使われ、プレビュー固有のURLで確認できる
+- **ローカル開発**: `CF_PAGES_BRANCH` が未設定のため本番扱いとなり、`SITE_URL` が使われる
+- **プラットフォーム移行時**: `src/consts.ts` の定数を1箇所変更するだけで対応可能
 
 ## 2. robots.txt の動的生成
-`public/robots.txt` は静的アセットのため環境変数をパースできません。Astroのエンドポイント機能を利用し、ビルド時にその時の `site`（つまり環境に応じたURL）を活用して出力するようにします。
+`public/robots.txt` は静的アセットのため環境変数をパースできない。Astroのエンドポイント機能を利用し、ビルド時にその時の `site`（つまり環境に応じたURL）を活用して出力する。
 
 ```typescript
 // src/pages/robots.txt.ts
 import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = ({ site }) => {
+  if (!site) {
+    return new Response('Sitemap site URL is not configured', { status: 500 });
+  }
+
   const robotsTxt = `
 User-agent: *
 Allow: /
@@ -36,17 +59,15 @@ Sitemap: ${new URL('sitemap-index.xml', site).href}
 ```
 
 ## 3. SEOコンポーネント（JSON-LD等）での活用
-`Astro.site` グローバル変数は `astro.config.mjs` で定義された `site` を引き継ぎます。
-メタタグ構築やJSON-LDなどに絶対URLが必要な場合は、これを利用して生成します。
+`Astro.site` グローバル変数は `astro.config.mjs` で定義された `site` を引き継ぐ。
+メタタグ構築やJSON-LDなどに絶対URLが必要な場合は、これを利用して生成する。
 
 ```astro
 // Layout.astro 等
-const siteURL = Astro.site;
+const siteURL = Astro.site!;
 const ogImageURL = new URL('/ogpimg.jpg', siteURL);
 
 // JSON-LD内で活用
 "image": ogImageURL.toString(),
 "url": siteURL.toString(),
 ```
-
-このアプローチにより、「プレビュー環境ではプレビュー用の絶対URL」「本番環境では本番用の絶対URL」が正しく生成され、検証の容易さとSEOの正確性の両立が担保されます。

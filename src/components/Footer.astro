@@ -1,4 +1,5 @@
 ---
+import { SITE_URL } from '../consts';
 const year = new Date().getFullYear();
 ---
 
@@ -10,12 +11,12 @@ const year = new Date().getFullYear();
         </div>
         <div class="footer-links">
             <a
-                href="https://twitter.com/intent/tweet?url=https://trattoria-e-bar-porto-yamanashi.pages.dev/&text=山梨県にある北イタリア料理店（レストラン＆バー）です！"
+                href={`https://twitter.com/intent/tweet?url=${SITE_URL}/&text=山梨県にある北イタリア料理店（レストラン＆バー）です！`}
                 target="_blank"
                 rel="noopener noreferrer">Share on Twitter</a
             >
             <a
-                href="https://www.facebook.com/sharer/sharer.php?u=https://trattoria-e-bar-porto-yamanashi.pages.dev/"
+                href={`https://www.facebook.com/sharer/sharer.php?u=${SITE_URL}/`}
                 target="_blank"
                 rel="noopener noreferrer">Share on Facebook</a
             >
